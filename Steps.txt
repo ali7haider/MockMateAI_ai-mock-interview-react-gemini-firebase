@@ -1,0 +1,2 @@
+Setup the Vite project with react and Type Script
+Setup the TailwindCSS
