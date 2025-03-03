@@ -1,10 +1,18 @@
-import { Button } from "@/components/ui/button";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PublicLayout from "./layouts/public-layout";
+import HomePage from "@/routes/HomePage";
 
 function App() {
   return (
-    <div className="text-blue-500">
-      <Button>Click me</Button>;
-    </div>
+    <Router>
+      <Routes>
+        {/* Adding Public routes */}
+        <Route element={<PublicLayout />}>
+          <Route index element={<HomePage />} />
+        </Route>
+        {/* Protected Routes */}
+      </Routes>
+    </Router>
   );
 }
 
